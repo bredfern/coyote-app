@@ -12,5 +12,5 @@ $cha = $item->chapter;
 $ver = $item->verse;
 
 echo "<div class='port'> <b>" . $nam . " Chapter " . $cha . " Verse " . $ver . "</b></div>";
-echo $txt;
+echo "<div class='port'>" . $txt . "</div>";
 ?>
