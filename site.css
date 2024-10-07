@@ -55,7 +55,8 @@ h1 {
 }
 
 .container,
-.holder {
+.holder,
+.port {
     margin-left: auto;
     margin-right: auto;
 }
@@ -67,7 +68,7 @@ h1 {
 
 .port {
   text-align: left;
-  width: 80%;
+  width: 16rem;
 }
 
 button {
