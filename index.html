@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Pulls random quotes via server to server php call to a quote service."
+        />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>DJ Coyote</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            rel="preload"
+            as="style"
+            href="/site.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1><a href="/" id="heading">Coyote Wang</a></h1>
+            </header>
+            <main>
+                <div class="centered">
+                    <picture>
+                        <a href="/"
+                            ><img
+                                src="/coyote.svg"
+                                width="200"
+                                height="300"
+                                id="logo"
+                                alt="Coyote Logo"
+                        /></a>
+                    </picture>
+                </div>
+                <div class="holder">
+                    <button
+                        hx-get="get-quote.php"
+                        hx-trigger="click"
+                        hx-swap="outerHTML"
+                    >
+                        Get a Quote
+                    </button>
+                </div>
+            </main>
+            <footer class="centered">&#169; 2024 Coyote Wang</footer>
+        </div>
+        <script src="https://unpkg.com/htmx.org" defer></script>
+    </body>
+</html>
