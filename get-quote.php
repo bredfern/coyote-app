@@ -11,6 +11,6 @@ $nam = $item->book_name;
 $cha = $item->chapter;
 $ver = $item->verse;
 
-echo "<b>" . $nam . " Chapter " . $cha . " Verse " . $ver . "</b><br />";
+echo "<div class=\"port\" <b>" . $nam . " Chapter " . $cha . " Verse " . $ver . "</b></div>";
 echo $txt;
 ?>
