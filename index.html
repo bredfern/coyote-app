@@ -9,44 +9,80 @@
         />
         <link rel="shortcut icon" href="/favicon.ico" />
         <title>Coyote Wang</title>
-        <link
-            rel="stylesheet"
-            type="text/css"
-            rel="preload"
-            as="style"
-            href="/site.css"
-        />
+        
+        <link rel="stylesheet" type="text/css" rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
     </head>
-    <body>
-        <div class="container">
-            <header>
-                <h1><a href="/" id="heading">Coyote Wang</a></h1>
-            </header>
-            <main>
-                <div class="centered">
-                    <picture>
-                        <a href="/"
-                            ><img
-                                src="/coyote.svg"
-                                width="200"
-                                height="300"
-                                id="logo"
-                                alt="Coyote Logo"
-                        /></a>
-                    </picture>
-                </div>
-                <div class="holder">
-                    <button
-                        hx-get="get-quote.php"
-                        hx-trigger="click"
-                        hx-swap="outerHTML"
-                    >
-                        Get a Quote
-                    </button>
-                </div>
-            </main>
-            <footer class="centered">&#169; 2024 Coyote Wang</footer>
+    <body hx-boost="true">
+       <section class="hero is-primary is-medium">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/coyote-dark.svg" alt="Coyote Logo">
+          </a>
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </div>
-        <script src="https://unpkg.com/htmx.org" defer></script>
-    </body>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active" hx-boost="true" href="get-started.php"> Home </a>
+            <a class="navbar-item"> Examples </a>
+            <a class="navbar-item"> Documentation </a>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">Coyote</p>
+      <p class="subtitle">Your Fortune Teller</p>
+      <p>
+        <img src="/coyote-dark.svg" width="60" height="100" alt="Coyote Logo">
+      </p>
+      <p>
+        <div class="holder">
+          <button
+            hx-get="get-started.php"
+            hx-trigger="click"
+            hx-swap="outerHTML"
+            class="button is-small is-info"
+          >
+            Get Started
+          </button>
+        </div>
+      </p>
+    </div>
+  </div>
+
+<footer class="footer hero-foot">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Coyote</strong> by <a href="https://redfern.work">Brian Redfern</a> Copyright 2024.
+    </p>
+  </div>
+</footer>
+</section>
+<script src="https://unpkg.com/htmx.org" defer></script>
+</body>
 </html>
+
+
+
